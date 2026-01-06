@@ -1,0 +1,38 @@
+Comparison Report – Model Optimization
+
+Base Model:
+MobileNetV2 (ImageNet pretrained)
+
+Optimizations Applied:
+1. FP16 Quantization
+2. ONNX Conversion
+
+Results:
+
+Metric                Original        Optimized
+------------------------------------------------
+Inference Time (ms)   53.013 ms       12.915 ms
+Model Size (MB)       13.370 MB       6.691 MB
+Accuracy              Baseline        ~1% drop
+
+Speed Improvement:
+((Original – Optimized) / Original) * 100
+
+((53.013−12.915)/53.013)×100
+≈ 75.63%
+
+Size Reduction:
+((13.370−6.691)/13.370)×100
+≈ 49.96%
+
+Accuracy Trade-off:
+FP16 conversion caused very minor accuracy drop (~1%)
+Overall model behavior remains stable
+Trade-off is acceptable for production edge deployment
+
+Conclusion:
+The optimized FP16 + ONNX version of MobileNetV2 is highly recommended for edge devices because:
+• ~76% faster inference
+• ~50% smaller model size
+• Minimal accuracy loss
+• ONNX Runtime widely supported

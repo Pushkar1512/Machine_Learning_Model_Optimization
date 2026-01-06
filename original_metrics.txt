@@ -1,0 +1,4 @@
+Model: Original
+Inference Time (ms): 53.013
+Model Size (MB): 13.370
+Accuracy: Imagenet pretrained

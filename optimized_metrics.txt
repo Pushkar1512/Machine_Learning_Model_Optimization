@@ -1,0 +1,4 @@
+Model: Optimized FP16 + ONNX
+Inference Time (ms): 12.915
+Model Size (MB): 6.691
+Accuracy: Slightly reduced (~<1%)
